@@ -9,18 +9,21 @@ document.getElementById("intake-form").addEventListener("submit", function(e) {
     duration_amp: form.duration_amp.value,
     interest_quit: form.interest_quit.value
   };
+
   fetch("https://script.google.com/macros/s/AKfycbw0RRQ2ali5Le4sUcr9dA7S6DOJbYbOt-YcnJblFQS7thB8sOEUFOmByMSr3gh79Kq5/exec", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json"
     }
-  }).then(response => {
-    if (response.ok) {
-      alert("ส่งข้อมูลเรียบร้อยแล้ว! ขอบคุณค่ะ 💚");
+  }).then(res => {
+    if (res.ok) {
+      alert("ส่งข้อมูลเรียบร้อยแล้ว! 💚");
       form.reset();
     } else {
-      alert("เกิดข้อผิดพลาดในการส่งข้อมูล");
+      alert("ส่งข้อมูลไม่สำเร็จ โปรดลองอีกครั้งค่ะ");
     }
+  }).catch(err => {
+    alert("เกิดข้อผิดพลาดในการส่งข้อมูล: " + err.message);
   });
 });
