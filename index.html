@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>พี่พลังสุข - Intake Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e6f5e6;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      color: #2e8b57;
+    }
+    .form-section {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      padding: 8px;
+      margin: 6px 0;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #246b45;
+    }
+  </style>
+</head>
+<body>
+  <h1>พี่พลังสุข 💚 แบบประเมินเบื้องต้น</h1>
+  <form id="intake-form">
+    <div class="form-section">
+      <label>ชื่อ - สกุล:</label>
+      <input type="text" name="name" required />
+
+      <label>เพศ:</label>
+      <select name="gender">
+        <option value="ชาย">ชาย</option>
+        <option value="หญิง">หญิง</option>
+        <option value="อื่นๆ">อื่นๆ</option>
+      </select>
+
+      <label>อายุ:</label>
+      <input type="number" name="age" required />
+
+      <label>ระดับการศึกษา:</label>
+      <input type="text" name="education" />
+
+      <label>ระยะเวลาที่ใช้แอมเฟตามีน (ปี):</label>
+      <input type="number" name="duration_amp" step="0.1" />
+
+      <label>ความสนใจในการเลิกแอมเฟตามีน:</label>
+      <select name="interest_quit">
+        <option value="สนใจ">สนใจ</option>
+        <option value="ไม่สนใจ">ไม่สนใจ</option>
+      </select>
+    </div>
+    <button type="submit">ส่งข้อมูล</button>
+  </form>
+</body>
+</html>
