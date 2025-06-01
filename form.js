@@ -10,7 +10,7 @@ document.getElementById("intake-form").addEventListener("submit", function(e) {
     interest_quit: form.interest_quit.value
   });
 
-  fetch("https://script.google.com/macros/s/AKfycbw0RRQ2ali5Le4sUcr9dA7S6DOJbYbOt-YcnJblFQS7thB8sOEUFOmByMSr3gh79Kq5/exec?" + params)
+  fetch("https://script.google.com/macros/s/AKfycbx_Y4IPEY0KzHXh-618x2kBfVQZaI6RAva2v_LiEfIT6CRiSJ7fn4CBxVECLRWs9sBE/exec?" + params)
     .then(response => response.text())
     .then(result => {
       alert("ส่งข้อมูลสำเร็จแล้ว! 💚");
